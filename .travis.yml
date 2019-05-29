@@ -1,0 +1,19 @@
+language: node_js
+node_js:
+  - "11"
+install:
+  - npm install
+script:
+  - hexo g
+after_script:
+  - cd ./public  
+  - git config user.name "zhufengnodejs"
+  - git config user.email "zhufengnodejs@126.com"
+  - git init
+  - git add -A
+  - git commit -m"init"
+  - git push --force "https://github.com/zhufengnodejs/zblog.git" master:gh-pages
+branches:
+  only:
+    - master  
+
