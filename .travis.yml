@@ -12,7 +12,7 @@ after_script:
   - git init
   - git add -A
   - git commit -m"init"
-  - git push --force "https://${TOKEN}github.com/zhufengnodejs/zblog.git" master:gh-pages
+  - git push --force "https://${TOKEN}@github.com/zhufengnodejs/zblog.git" master:gh-pages
 branches:
   only:
     - master  
